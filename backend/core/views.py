@@ -49,7 +49,7 @@ def index(request):
     book.add_item(epub.EpubNav())
 
     # define CSS style
-    style = 'BODY {color: red;}'
+    style = 'body {background-color: red;}'
     nav_css = epub.EpubItem(uid="style_nav", file_name="style/nav.css", media_type="text/css", content=style)
 
     # add CSS file
