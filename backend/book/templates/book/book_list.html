@@ -26,9 +26,24 @@
 
   <section class="w3-row w3-center w3-padding-64">
     <div class="w3-padding-large">
-      <h1 class="w3-center">Gerador de E-book</h1><br>
-      <a href="{% url 'book:list' %}" class="w3-bar-item w3-btn">Meus Livros</a>
-      <a href="#" class="w3-bar-item w3-btn">Criar Novo</a>
+        <div class="">
+            {% if object_list %}
+                {% for book in object_list %}
+                    <div class="">
+                        <a class="" href="{% url 'book:detail' book.slug %}">
+                            <div class="">
+                                <img src="/media/{{ book.cover }}" style="width: 15rem;" alt="">
+                                <div class="">
+                                    <p class="">{{ book.title }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% empty %}
+                    <h6>Não há livros para exibir</h6>
+                {% endfor %}
+            {% endif %}
+        </div>
     </div>
   </section>
 
