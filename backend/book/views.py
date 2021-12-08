@@ -1,7 +1,15 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import DetailView, ListView
+from django.urls import reverse
+from django.views.generic import DetailView, ListView, CreateView
 
+from .forms import BookCreateForm
 from .models import Book, Category
+
+
+class BookCreateView(CreateView):
+    model = Book
+    form_class = BookCreateForm
 
 
 class BookDetail(DetailView):
