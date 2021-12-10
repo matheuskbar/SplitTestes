@@ -1,10 +1,12 @@
+from django.shortcuts import render
 from django.views.generic import TemplateView
+from ebooklib import epub
 
 
 class IndexView(TemplateView):
     template_name = 'index.html'
 
-<<<<<<< HEAD
+
 def index(request):
     book = epub.EpubBook()
 
@@ -52,5 +54,4 @@ def index(request):
     # write to the file
     epub.write_epub('test.epub', book, {})
     return render(request, 'index.html')
-=======
->>>>>>> inicial
+
