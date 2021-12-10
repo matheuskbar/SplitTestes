@@ -60,4 +60,4 @@ def index(request):
 
     # write to the file
     epub.write_epub('test.epub', book, {})
-    return render(request, 'index.html', {'b': book})
+    return render(request, 'index.html')
