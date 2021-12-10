@@ -1,19 +1,10 @@
-# from django.shortcuts import render
-# import ebooklib
-# from ebooklib import epub
-# from ebooklib.epub import EpubBook
-#
-# Teste de leitura
-# def index(request):
-#     book = epub.read_epub('core/meuEbook.epub')
-#     print(dir(book))
-#     return render(request, 'index.html', {'b': book})
-
-# Teste de escrita
-from django.shortcuts import render
-from ebooklib import epub
+from django.views.generic import TemplateView
 
 
+class IndexView(TemplateView):
+    template_name = 'index.html'
+
+<<<<<<< HEAD
 def index(request):
     book = epub.EpubBook()
 
@@ -61,3 +52,5 @@ def index(request):
     # write to the file
     epub.write_epub('test.epub', book, {})
     return render(request, 'index.html')
+=======
+>>>>>>> inicial

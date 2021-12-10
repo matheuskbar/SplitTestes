@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="EPB-UUID" version="2.0">
+   <metadata xmlns:opf="http://www.idpf.org/2007/opf"
+             xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <dc:title>Primeiro E-book</dc:title>
+      <dc:creator opf:role="aut" opf:file-as="Matheus">Matheus</dc:creator>
+      <dc:date opf:event="original-publication">2021</dc:date>
+      <dc:publisher>Eu mesmo</dc:publisher>
+      <dc:date opf:event="epub-publication">2021-11-26</dc:date>
+      <dc:subject>Teste com o primeiro e-pub</dc:subject>
+      <dc:subject>Projeto Split</dc:subject>
+      <dc:source>Tableless</dc:source>
+      <dc:rights>Pode copiar galera!</dc:rights>
+      <dc:identifier id="EPB-UUID">minhaid</dc:identifier>
+      <dc:language>pt-br</dc:language>
+   </metadata>
+   <manifest>
+      <!-- Documentos -->
+      <item id="titulo" href="titulo.html" media-type="application/xhtml+xml" />
+	  <item id="capitulo1" href="capitulo1.html" media-type="application/xhtml+xml" />
+	  <item id="capitulo2" href="capitulo2.html" media-type="application/xhtml+xml" />
+	  <item id="capitulo3" href="capitulo3.html" media-type="application/xhtml+xml" />
+	  <item id="capitulo4" href="capitulo4.html" media-type="application/xhtml+xml" />
+
+      <!-- CSS Style Sheets -->
+      <item id="main-css" href="style.css" media-type="text/css"/>
+
+      <!-- NCX -->
+      <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+   </manifest>
+   <spine toc="ncx">
+      <itemref idref="titulo" linear="yes"/>
+	  <itemref idref="capitulo1" linear="yes"/>
+	  <itemref idref="capitulo2" linear="yes"/>
+	  <itemref idref="capitulo3" linear="yes"/>
+	  <itemref idref="capitulo4" linear="yes"/>
+   </spine>
+</package>
